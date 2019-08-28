@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Volkhov" rel="stylesheet">
+	<style>
+/* ---- reset ---- */
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+  height:100px;
+  background-color: #17182f;
+}
+
+
+/* ---- particles.js container ---- */
+
+
+.container1{
+  width:100%;
+  height:100%;
+}
+.content{
+  position: absolute;
+    text-align: center;
+    color: white;
+    left:32%;
+    top: 40%;
+    font-size:5vw;
+}
+
+#blink{
+  animation-name: example;
+  animation-duration: 0.5s;
+  animation-iteration-count:infinite;
+}
+@keyframes example{
+  from{color: white;}
+  to{
+    color: #b30086;
+  }
+}
+@media only screen and (max-width:900px){
+  .content{position: absolute;
+    text-align: center;
+    color: white;
+    left: 0%;
+    top: 0%;
+    
+}
+}
+.navbar{
+  margin-top:-1%;
+  background-color:#17182f;
+  border-bottom: 4px solid #00b8d4;
+  z-index: 900;
+  padding: 20px;
+  padding-top: 0px;
+
+}
+.navbar a{ 
+color: white; 
+font-size:23px;}
+
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+   background-color:#17182f;
+     color:#b30086;
+}
+
+.container3{
+  margin-top: 10%;
+  overflow-x: hidden;
+  text-align: center;
+
+}
+h1,h3{
+  color: grey;
+  
+  font-weight: 900;
+}
+
+.container3 i{
+  font-size: 150px;
+  margin-top: 20%;
+  text-align: center;
+  color: #00b8d4;
+}
+
+.container4{
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #00b8d4;}
+.css {width: 80%; background-color: #00b8d4;}
+.js {width: 65%; background-color: #00b8d4;}
+.jquery {width: 60%; background-color: #00b8d4;}
+
+.container5{
+   width: 100%;
+  background-color: #ddd;
+  text-align: center;
+  margin-top: 15%;
+  overflow-x: hidden;
+}
+.service-wrapper{
+      position: relative;
+      display: block;
+    }
+.img1{
+  width:100%;
+  height: 100%;
+  display: block;
+
+}
+.service-wrapper-inner{
+      position: absolute;
+      bottom: 0px;
+      background-color: white;
+      opacity: 0.9;
+      overflow: hidden;
+      width: 100%;
+      height:0;
+      transition: 0.5s ease;
+      }
+    .service-wrapper:hover .service-wrapper-inner{
+      height: 100%;
+    }
+    .button{
+      white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #b30086;
+  border:2px solid #b30086;
+  color:white;
+  opacity: 1;
+  text-decoration-line: none;
+    }
+
+
+
+
+
+
+
+.container6{
+  text-align: center;
+  background-color: #17182f;
+  margin-top: 15%;
+  display: block;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+.form-group{
+  max-width:100%;
+  margin-left:100%;
+  color: white;
+  padding-bottom: 90px;
+}
+.sticky {
+  position: fixed;
+  top: 0px;
+  width: 100%
+}
+.submit{
+  background-color:#b30086; 
+  color:white;
+  margin-top: 12%;
+  border:2px solid #b30086;
+  border-radius: 60px;
+  padding:10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+</style>
+</head>
+<body>
+<!-- particles.js container --> 
+<div class="container1">
+<div id="particles-js">
+  <div class="content">
+  <h2> Hello, I'm <span id="blink">Akansha Goel</span></h2>
+  <h2>I'm a front-end web developer</h2>
+</div>
+</div>
+</div>
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+	particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 355,
+      "density": {
+        "enable": true,
+        "value_area": 789.1476416322727
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.48927153781200905,
+      "random": false,
+      "anim": {
+        "enable": true,
+        "speed": 0.2,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 10,
+        "size_min": 0,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.2,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 83.91608391608392,
+        "size": 1,
+        "duration": 3,
+        "opacity": 1,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+	</script>
+
+ <nav class="navbar" id="sticky_header">
+<div class="container" >
+<button type="button" class='navbar-toggle' data-toggle="collapse" data-target="#navbarcollapse">
+  <i class="fa fa-align-justify" style="font-size:48px;color:white;"></i>
+</button>
+<div class="collapse navbar-collapse" id="navbarcollapse">
+<ul class="nav navbar-nav ">
+ <li><a href="#">HOME</a></li>
+       <li><a href="#">ABOUT</a></li>
+       <li><a href="#">PORTFOLIO</a></li>
+       <li><a href="#">CONTACT </a></li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+<div class="container3">
+  <div data-sr><h1 id="about"> ABOUT</h1></div>
+  <div class="content3">
+    <div class="row">
+      <div class="col-sm-4">
+        <i class="fa fa-tachometer" aria-hidden="true"></i>
+        <h3> Fast</h3>
+      </div>
+
+       <div class="col-sm-4">
+        <i class="fa fa-mobile" aria-hidden="true"></i>
+        <h3>Responsive</h3>
+      </div>
+
+
+       <div class="col-sm-4">
+        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+        <h3>Intuitive</h3>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <p>I'm the Front-End Developer. I have serious passion for creating intuitive,responsive websites. </p>
+      </div>
+
+       <div class="col-sm-6">
+        <p>HTML</p>
+<div class="container4">
+  <div class="skills html">90%</div>
+</div>
+
+<p>CSS</p>
+<div class="container4">
+  <div class="skills css">80%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="container4">
+  <div class="skills js">65%</div>
+</div>
+
+
+  <p>JQuery</p>
+<div class="container4">
+  <div class="skills jquery">45%</div>
+</div>
+ </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="container5">
+  <div class="jumbotron">
+    <h1> PROJECTS</h1>
+
+
+      <div class="row">
+
+        <div class="col-sm-4">
+          <div class="service-wrapper">
+  <div>
+          <img src="https://images.pexels.com/photos/1879061/pexels-photo-1879061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img1">
+          </div>
+  <div class="service-wrapper-inner">
+   <a href="https://akansha1234.github.io/themewagon" class="button">Learn More</a>
+  </div>
+</div>
+        </div>
+
+
+         <div class="col-sm-4">
+           <div class="service-wrapper">
+  <div>
+          <img src="https://www.padstowbreaks.com/images/jpeg/hero-home-4--1400.jpg?v=2.07" class="img1">
+        </div>
+          <div class="service-wrapper-inner">
+  <a href="https://akansha1234.github.io/" class="button">Learn More</a>
+    </div>
+  </div>
+
+        </div>
+
+
+
+         <div class="col-sm-4">
+           <div class="service-wrapper">
+  <div>
+          <img src="https://images.pexels.com/photos/1314540/pexels-photo-1314540.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img1">
+        </div>
+        <div class="service-wrapper-inner">
+  <a href="https://akansha1234.github.io/Number_facts/" class="button">Learn More</a>
+    </div>
+  </div>
+        </div>
+      </div>
+
+
+
+       <div class="row">
+
+        <div class="col-sm-4">
+          <div class="service-wrapper">
+  <div>
+          <img src="https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img1">
+        </div>
+        <div class="service-wrapper-inner">
+   <a href="https://akansha1234.github.io/Tip-calculator/" class="button">Learn More</a>
+    </div>
+  </div>
+        </div>
+
+
+         <div class="col-sm-4">
+                    <div class="service-wrapper">
+  <div>
+          <img src="https://images.pexels.com/photos/375903/pexels-photo-375903.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img1">
+        </div>
+        <div class="service-wrapper-inner">
+  <a href="https://akansha1234.github.io/flex/." class="button">Learn More</a>
+    </div>
+        </div>
+      </div>
+
+
+
+         <div class="col-sm-4">
+                    <div class="service-wrapper">
+  <div>
+          <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img1">
+        </div>
+        <div class="service-wrapper-inner">
+  <a href=" https://akansha1234.github.io/Mobile_blog_app/." class="button">Learn More</a>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+  <footer>
+    <div class="container6">
+      <h1>CONTACT</h1>
+      <form class="form-horizontal" action="/action_page.php">
+      <div class="form-group" style="max-width:50%; margin-left:27%;">
+        <label>Name</label>
+        <input type="text" class="form-control">
+        <label>e-mail</label>
+        <input type="email" class="form-control">
+        <label>Your message</label>
+        <textarea name="message" class="form-control"></textarea>
+        <button type="submit" class="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+  </footer>
+  <script>
+    // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("sticky_header");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+  </script>
+
+  <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+  
+<script>
+ 
+// Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('div', {opacity: 0.9,duration:3000});
+
+</script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  window.sr=ScrollReveal();
+  sr.reveal('img',{
+    duration:2000,
+    origin:'bottom'
+  })
+</script>
+</body>
+</html>
